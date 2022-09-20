@@ -13,10 +13,10 @@ on:
          uses: actions/checkout@v1 
          
        - name: Git checkout
-         run : git checkout lab04_master
+         run : git checkout Lab004_TIMP_master
          
        - name: Git pull
-         run : git pull origin lab04_master
+         run : git pull origin Lab004_TIMP_master
      
        - name: Test_formatter_lib
          working-directory: formatter_lib
