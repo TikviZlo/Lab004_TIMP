@@ -11,7 +11,7 @@ on:
 
 jobs:
   Build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
     - name: checkout
@@ -27,7 +27,7 @@ jobs:
         cmake --build _build
         mv _build formatter_lib_build
         mv formatter_lib_build ../artifacts
-      shell: bash
+      shell: cmd
       working-directory: formatter_lib
       
     - name: Build a *formatter_ex* library
@@ -36,7 +36,7 @@ jobs:
         cmake --build _build
         mv _build formatter_ex_lib_build
         mv formatter_ex_lib_build ../artifacts
-      shell: bash
+      shell: cmd
       working-directory: formatter_ex_lib
       
     - name: Build a *hello_world* application
@@ -45,7 +45,7 @@ jobs:
         cmake --build _build
         mv _build hello_world_build
         mv hello_world_build ../artifacts
-      shell: bash
+      shell: cmd
       working-directory: hello_world_application
       
     - name: Build a *solver* library
@@ -54,7 +54,7 @@ jobs:
         cmake --build _build
         mv _build solver_lib_build
         mv solver_lib_build ../artifacts
-      shell: bash
+      shell: cmd
       working-directory: solver_lib
       
     - name: Build a *solver* application
@@ -63,7 +63,7 @@ jobs:
         cmake --build _build
         mv _build solver_app_build
         mv solver_app_build ../artifacts
-      shell: bash
+      shell: cmd
       working-directory: solver_application
       
     - name: Push artifacts into repo
