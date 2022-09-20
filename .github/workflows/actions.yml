@@ -1,25 +1,24 @@
 ​name​: ​CMake_Build 
   
- on​: 
- ​  ​push​: 
- ​    ​branches​: ​[ master ] 
- ​  ​pull_request​: 
- ​    ​branches​: ​[ master ] 
+on​: 
+ ​ ​push​: 
+ ​   ​branches​: ​[ master ] 
+   ​pull_request​: 
+​    ​branches​: ​[ master ] 
+   ​  ​#​ Allows you to run this workflow manually from the Actions tab 
+   ​workflow_dispatch​: 
   
- ​  ​#​ Allows you to run this workflow manually from the Actions tab 
- ​  ​workflow_dispatch​: 
-  
- ​jobs​: 
- ​  ​Build​: 
- ​    ​runs-on​: ​windows-latest 
+​jobs​: 
+   ​Build​: 
+​    ​runs-on​: ​windows-latest 
  ​     
- ​    ​steps​: 
- ​    - ​name​: ​checkout 
- ​      ​uses​: ​actions/checkout@v3 
+​    ​steps​: 
+ ​     - ​name​: ​checkout 
+   ​     ​uses​: ​actions/checkout@v3 
  ​       
- ​    - ​name​: ​Creating directory for future compiled artefacts 
- ​      ​run​: ​| 
- ​        mkdir artifacts 
+​      - ​name​: ​Creating directory for future compiled artefacts 
+        ​run​: ​| 
+          mkdir artifacts 
  ​     
  ​    - ​name​: ​Build a *formatter* library 
  ​      ​run​: ​| 
