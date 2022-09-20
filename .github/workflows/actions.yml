@@ -10,13 +10,13 @@ jobs:
       - name: Git clone
         uses: actions/checkout@v3
         with:
-          ref: Lab004_TIMP_master
+          ref: master
         
       - name: Git checkout
-        run : git checkout Lab004_TIMP_master
+        run : git checkout master
         
       - name: Git pull
-        run : git pull origin Lab004_TIMP_master
+        run : git pull origin master
     
       - name: Test_formatter_lib
         working-directory: formatter_lib
